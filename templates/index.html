@@ -25,19 +25,27 @@
       </script>  
   </head>
   <body>
-    <div class="container" style="margin-top:4%;">
+    <div class="container" style="margin-top:4%;" >
       <br>
       <form action="/shorten" method="post" class="text-center" style="width: 800px;">
         <div class="form-group">
         <h1 class="text-center">URL changer</h1>
         <br>
-      <p >This website showcases my technical skills in Back-end languages (Golang, SQL), server management, Golang frameworks (Gin, Gorm), MySQL knowledge, and minimalistic design approach. The URL changing service project demonstrates my expertise in combining various web development elements to create a functional website. I continuously strive to enhance my skills and improve my projects, whether through implementing new features or fixing bugs. This project demonstrates my passion for staying updated with latest web technologies and delivering high-quality results.</p>
+      <p>This website is a tool for anyone who needs to quickly and easily shorten long URLs. With just a few clicks, you can turn a cumbersome and difficult to remember URL into a shorter, more manageable link. To use the URL changer, simply enter the long URL into the input field, and the website will generate a shorter URL for you to use in its place. Whether you're sharing links on social media, in emails, or on your own website, our URL changer makes it easy to keep your links organized and easy to remember.</p>
           <input type="text" class="form-control" id="target" name="target" required placeholder="https://example.com">
         </div>
         <div class="text-left">
         <button type="submit" class="btn btn-primary">Change the URL</button>
         </div>
       </form>
+      <style>
+        form {
+          max-width: 100%;
+        }
+        .card {
+          max-width: 100%;
+        }
+      </style>
       <br><br>
       <hr>
       <br><br>

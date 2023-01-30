@@ -24,7 +24,7 @@ type Visit struct {
 var rateLimiter = make(map[string]int)
 
 func main() {
-	db, err := gorm.Open("mysql", "username:password@tcp(server:port)/urls?charset=utf8&parseTime=True&loc=Local")
+	db, err := gorm.Open("mysql", "root:123@tcp(localhost:3306)/urls?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		panic(err)
 	}
