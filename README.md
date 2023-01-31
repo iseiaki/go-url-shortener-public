@@ -29,22 +29,35 @@
 <ul>
 <li>Send POST request to {site_domain}/api</li>
 <li>Include the original url in the request body as JSON</li>
-  <li>Get the new URL back </li>
-</ul>
-<h2>Demo deploy</h2>
-Demo deploy can be seen at: <a href="https://url.up.railway.app" target="_blank">https://url.up.railway.app</a>
+<li>Get the new URL back </li>
+<li>Example in Python</li><br>
+<pre><code>import requests
+  url = "https://url.up.railway.app/api"
+  data = {
+      "url": "https://example.com"
+  }
+  response = requests.post(url, json=data)
+  if response.status_code == 200:
+      result = response.json()
+      print(result["Newurl"])
+  else:
+      print("Request failed with status code", response.status_code)
+      //Output: https://url.up.railway.app/{{ID}}</code></pre>
+   
+<h2>Deploy</h2>
+Deploy can be seen at: <a href="https://url.up.railway.app" target="_blank">https://url.up.railway.app</a>
 
 <h2>Getting Started</h2>
-<ol>
+<ul>
   <li>Clone the repository</li>
-  <li>Run the following command in the terminal to install dependencies:
+  <li>Run the following command in the terminal to install dependencies:<br>
     <pre><code>go get -u github.com/gin-gonic/gin github.com/jinzhu/gorm github.com/go-sql-driver/mysql</code></pre>
   </li>
   <li>Create a new database and update the database details in the main.go file</li>
-  <li>Run the following command in the terminal to start the application:
+  <li>Run the following command in the terminal to start the application:<br>
     <pre><code>go run main.go</code></pre>
   </li>
   <li>Access the application in your browser at http://localhost:8080/</li>
-</ol>
+</ul>
 <h2>Contact</h2>
 For any questions or feedback, feel free to reach out at mirokurtanidze16@gmail.com.
