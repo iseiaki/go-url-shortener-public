@@ -27,7 +27,9 @@
 </ul>
 <h2>API and how to use it</h2>
 <ul>
-<li>Send POST request to </li>
+<li>Send POST request to {site_domain}/api</li>
+<li>Include the original url in the request body as JSON</li>
+  <li>Get the new URL back </li>
 </ul>
 <h2>Demo deploy</h2>
 Demo deploy can be seen at: <a href="https://url.up.railway.app" target="_blank">https://url.up.railway.app</a>
