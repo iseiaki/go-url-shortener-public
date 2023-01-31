@@ -23,16 +23,22 @@ type Visit struct {
 
 var rateLimiter = make(map[string]int)
 
+
 func main() {
+	
 	db, err := gorm.Open("mysql", "root:123@tcp(localhost:3306)/urls?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		panic(err)
 	}
 	defer db.Close()
-
+	
 	db.AutoMigrate(&URL{})
-
 	router := gin.Default()
+
+	//take care of api
+	router.POST("/api", apipost)
+	router.GET("/api", apiget)
+
 	router.LoadHTMLGlob("templates/*")
 
 	router.GET("/:code", func(c *gin.Context) {
@@ -52,8 +58,7 @@ func main() {
 		var count int 
 		db.Table("urls").Count(&count) 
 		c.HTML(200, "index.html", gin.H{"alltime": count, "visits": visit.Visits})
-	})
-	
+	})	
 	
 	
 	router.POST("/shorten", func(c *gin.Context) {
@@ -64,9 +69,7 @@ func main() {
 			return
 		}
 		rateLimiter[ip]++
-
 		target := c.PostForm("target")
-
 		rand.Seed(time.Now().UnixNano())
 		var code string
 		for {
