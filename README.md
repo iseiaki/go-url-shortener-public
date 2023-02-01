@@ -1,5 +1,5 @@
-<h1>Golang URL Changer</h1>
-<p>This is a simple web application that allows users to change the URL of a website. It was built using Golang as the back-end language and showcases my technical skills in back-end development, including:</p>
+<h1>Golang URL Shortener</h1>
+<p>This is a simple web application that allows users to shorten the URL of a website. It was built using Golang as the back-end language and showcases my technical skills in back-end development, including:</p>
 <ul>
   <li>Proficiency in Golang and SQL</li>
   <li>Working with servers</li>
