@@ -32,7 +32,7 @@
 <li>Get the new URL back </li>
 <li>Example in Python</li><br>
 <pre><code>import requests
-  url = "https://url.up.railway.app/api"
+  url = "https://0r.wtf/api"
   data = {
       "url": "https://example.com"
   }
@@ -42,10 +42,10 @@
       print(result["Newurl"])
   else:
       print("Request failed with status code", response.status_code)
-      //Output: https://url.up.railway.app/{{ID}}</code></pre>
+      //Output: https://0r.wtf/{{ID}}</code></pre>
    
 <h2>Deploy</h2>
-Deploy can be seen at: <a href="https://url.up.railway.app" target="_blank">https://url.up.railway.app</a>
+Deploy can be seen at: <a href="https://0r.wtf" target="_blank">https://0r.wtf</a>
 
 <h2>Getting Started</h2>
 <ul>
