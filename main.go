@@ -21,7 +21,7 @@ type Visit struct {
 	Visits  int
 }
 
-var rateLimiter = make(map[string]int)
+var rateLimiter = make(map[string]int) // mainer
 
 
 func main() {
